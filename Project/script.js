@@ -3,6 +3,9 @@ let ulTasks = $('#ulTasks')
 let btnAdd = $('#btnAdd')
 let btnClear = $('#btnClear')
 let inpNewTask  = $('#inpNewTask')
+function addItem(){
+    
+}
 inpNewTask.keypress((e) =>{
     if(e.which==13){
         let listitem = $('<li>', {
