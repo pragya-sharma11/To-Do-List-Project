@@ -3,7 +3,9 @@ let ulTasks = $('#ulTasks')
 let btnAdd = $('#btnAdd')
 let btnClear = $('#btnClear')
 let inpNewTask  = $('#inpNewTask')
-
+inpNewTask.keypress((e) =>{
+    
+})
 btnAdd.click(()=>{
     let listitem = $('<li>', {
         'class':'list-group-item',
