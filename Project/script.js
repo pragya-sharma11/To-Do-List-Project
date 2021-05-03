@@ -9,6 +9,7 @@ $('#btnAdd').click(()=>{
         'class':'list-group-item',
         text:inpNewTask.val()
     })
+    ulTasks.append(listitem)
     console.log(inpNewTask.val())
     inpNewTask.val("")
 })
