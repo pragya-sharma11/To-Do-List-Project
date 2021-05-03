@@ -42,19 +42,7 @@ inpNewTask.keypress((e) =>{
      * e.which --->gives keycode
      */
 })
-btnAdd.click(()=>{
-    let listitem = $('<li>', {
-        'class':'list-group-item',
-        text:inpNewTask.val()
-    })
-    ulTasks.append(listitem)
-    inpNewTask.val("")
-    listitem.click((event) => {
-        //console.log("clicked", $(event.target))--->just for debugging!!
-        $(event.target).toggleClass('done')
-        //toggleClass()-->changes the class of any element
-    })
-})
+btnAdd.click(addItem())
 
 btnClear.click(()=>{
     inpNewTask.val("")
