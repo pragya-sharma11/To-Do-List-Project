@@ -10,6 +10,11 @@ btnAdd.click(()=>{
         text:inpNewTask.val()
     })
     ulTasks.append(listitem)
+    inpNewTask.val("")
+    listitem.click((event) => {
+        //console.log("clicked", $(event.target))--->just for debugging!!
+        $(event.target).toggleClass('disabled')
+    })
 })
 
 btnClear.click(()=>{
