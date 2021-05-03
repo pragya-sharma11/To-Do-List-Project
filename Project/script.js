@@ -5,6 +5,16 @@ let btnClear = $('#btnClear')
 let inpNewTask  = $('#inpNewTask')
 inpNewTask.keypress((e) =>{
     
+    //console.log(e.which)
+    /**
+     * for debugging
+     * go into the output on console
+     * search for original event
+     * then inside it, search for keycode
+     * and we get the keycode
+     * alternate way is :--
+     * e.which --->gives keycode
+     */
 })
 btnAdd.click(()=>{
     let listitem = $('<li>', {
