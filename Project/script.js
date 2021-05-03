@@ -6,5 +6,7 @@ let inpNewTask  = $('#inpNewTask')
 
 $('#btnAdd').click(()=>{
     console.log(inpNewTask.val())
+    inpNewTask.val("")
 })
 })
+
