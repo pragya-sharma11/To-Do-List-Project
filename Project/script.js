@@ -4,7 +4,24 @@ let btnAdd = $('#btnAdd')
 let btnClear = $('#btnClear')
 let inpNewTask  = $('#inpNewTask')
 inpNewTask.keypress((e) =>{
-    
+    if(e.which==13){
+        let listitem = $('<li>', {
+            'class':'list-group-item',
+            text:inpNewTask.val()
+        })
+        ulTasks.append(listitem)
+        inpNewTask.val('')
+    }
+    //console.log(e.which)
+    /**
+     * for debugging
+     * go into the output on console
+     * search for original event
+     * then inside it, search for keycode
+     * and we get the keycode
+     * alternate way is :--
+     * e.which --->gives keycode
+     */
     //console.log(e.which)
     /**
      * for debugging
