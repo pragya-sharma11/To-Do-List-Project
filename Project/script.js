@@ -13,7 +13,7 @@ btnAdd.click(()=>{
     inpNewTask.val("")
     listitem.click((event) => {
         //console.log("clicked", $(event.target))--->just for debugging!!
-        $(event.target).toggleClass('disabled')
+        $(event.target).toggleClass('done')
         //toggleClass()-->changes the class of any element
     })
 })
