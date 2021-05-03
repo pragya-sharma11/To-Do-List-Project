@@ -4,7 +4,18 @@ let btnAdd = $('#btnAdd')
 let btnClear = $('#btnClear')
 let inpNewTask  = $('#inpNewTask')
 function addItem(){
-    
+    if(e.which==13){
+        let listitem = $('<li>', {
+            'class':'list-group-item',
+            text:inpNewTask.val()
+        })
+        ulTasks.append(listitem)
+        inpNewTask.val('')
+        listitem.click((event) => {
+            //console.log("clicked", $(event.target))--->just for debugging!!
+            $(event.target).toggleClass('done')
+            //toggleClass()-->changes the class of any element
+        })
 }
 inpNewTask.keypress((e) =>{
     if(e.which==13){
