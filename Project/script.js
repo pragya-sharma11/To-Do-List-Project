@@ -14,6 +14,7 @@ btnAdd.click(()=>{
     listitem.click((event) => {
         //console.log("clicked", $(event.target))--->just for debugging!!
         $(event.target).toggleClass('disabled')
+        //toggleClass()-->changes the class of any element
     })
 })
 
