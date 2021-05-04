@@ -39,5 +39,9 @@ btnAdd.click(()=>{
 btnReset.click(()=>{
     inpNewTask.val("")
 })
+
+btnCleanup.click(()=>{
+    
+})
 })
 
