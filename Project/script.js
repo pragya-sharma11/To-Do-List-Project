@@ -57,10 +57,14 @@ function toggleAddResetBtn(enabled){
     if(enabled) {
         btnReset.prop('disabled',false)
         btnAdd.prop('disabled',false)
+        btnSort.prop('disabled',false)
+        btnCleanup.prop('disabled',false)
     }
     else {
         btnReset.prop('disabled',true)
         btnAdd.prop('disabled',true)
+        btnSort.prop('disabled',true)
+        btnCleanup.prop('disabled',true)
     }
 }
 inpNewTask.on('input', ()=>{
