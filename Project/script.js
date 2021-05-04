@@ -51,5 +51,13 @@ function sortDone(){
     $('#ulTasks .done').appendTo(ulTasks)
 }
 btnSort.click(sortDone)
+
+function toggleResetBtn(enabled){
+    if(enabled) btnReset.prop('disabled',false)
+    else btnReset.prop('disabled',true)
+}
+inpNewTask.on('input', ()=>{
+    toggleResetBtn(inpNewTask.val() != '') 
+})
 })
 
