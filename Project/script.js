@@ -40,8 +40,9 @@ btnReset.click(()=>{
     inpNewTask.val("")
 })
 
-btnCleanup.click(()=>{
-    
-})
+function clearDone(){
+$('#ulTasks li.done').remove()
+}
+btnCleanup.click(clearDone)
 })
 
