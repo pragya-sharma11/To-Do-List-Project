@@ -52,12 +52,18 @@ function sortDone(){
 }
 btnSort.click(sortDone)
 
-function toggleResetBtn(enabled){
-    if(enabled) btnReset.prop('disabled',false)
-    else btnReset.prop('disabled',true)
+function toggleAddResetBtn(enabled){
+    if(enabled) {
+        btnReset.prop('disabled',false)
+        btnAdd.prop('disabled',false)
+    }
+    else {
+        btnReset.prop('disabled',true)
+        btnAdd.prop('disabled',true)
+    }
 }
 inpNewTask.on('input', ()=>{
-    toggleResetBtn(inpNewTask.val() != '') 
+    toggleAddResetBtn(inpNewTask.val() != '') 
 })
 })
 
