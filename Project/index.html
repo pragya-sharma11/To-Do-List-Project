@@ -26,7 +26,7 @@
         <h1 class="text-center">ToDo List</h1>
         <!-- Input Box -->
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-7">
                 <div class="form-group">
                     <label for="inpNewTask" class="form-label">New Task</label>
                     <input type="text" class="form-control" id="inpNewTask" aria-describedby="newTaskHelp" placeholder="Enter the name of the task ">
@@ -34,30 +34,31 @@
                 </div>
             
             </div>
+        
             <!-- buttons -->
-            <div class="col-md-4 row">
-                <div class="col-sm-3 col-md-6">
-                    <button class="btn btn-success col" id="btnAdd">
-                        <i class="fas fa-plus-square"></i> Add
+            <div class="col-md-5 row">
+                <div class="col-12 col-sm-3 col-md-6">
+                    <button class="btn btn-success col-sm-10 col-md-12 m-1" id="btnAdd">
+                        ( <i class="fas fa-plus-square"></i> ) Add
                     </button>
                 </div>
-                <div class="col-sm-3 col-md-6">
-                    <button class="btn btn-danger col" id="btnClear">
-                        <i class="fas fa-backspace"></i> Reset
+                <div class="col-12 col-sm-3 col-md-6">
+                    <button class="btn btn-danger col-sm-10 col-md-12 m-1" id="btnClear">
+                        ( <i class="fas fa-backspace"></i> ) Reset
                         <!-- fas means fontawesome solid, 
                              fa means fontawesome normal
                              fa, fas can be used coz these are free!!!
                         -->
                     </button>
                 </div>
-                <div class="col-sm-3 col-md-6">
-                    <button class="btn btn-info col" id="btnsort">
-                        <i class="fas fa-sort-amount-down"></i> sort
+                <div class="col-10 col-sm-3 col-md-6">
+                    <button class="btn btn-info col-sm-10 col-md-12 m-1" id="btnsort">
+                        ( <i class="fas fa-sort-amount-down"></i> ) sort
                     </button>
                 </div>
-                <div class="col-sm-3 col-md-6">
-                    <button class="btn btn-warning col m-2" id="btndelete">
-                        <i class="fas fa-trash-alt"></i> Cleanup
+                <div class="col-12 col-sm-3 col-md-6">
+                    <button class="btn btn-warning col-sm-10 col-md-12 m-1" id="btndelete">
+                        ( <i class="fas fa-trash-alt"></i>) Cleanup
                     </button>
                 </div>           
             </div>
@@ -66,6 +67,6 @@
         <ul class=" row list-group p-1" id="ulTasks">
             <!--m-2==margin is 2 and p-2==padding is 2-->
         </ul>
-    </div>
+    
 </body>
 </html>
