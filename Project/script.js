@@ -3,6 +3,7 @@ let ulTasks = $('#ulTasks')
 let btnAdd = $('#btnAdd')
 let btnReset = $('#btnReset')
 let inpNewTask  = $('#inpNewTask')
+let btnCleanup = $('#btnCleanup')
 function addItem(){
     let listitem = $('<li>', {
         'class':'list-group-item',
