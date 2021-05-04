@@ -1,7 +1,7 @@
 $(()=>{
 let ulTasks = $('#ulTasks')
 let btnAdd = $('#btnAdd')
-let btnClear = $('#btnClear')
+let btnReset = $('#btnReset')
 let inpNewTask  = $('#inpNewTask')
 function addItem(){
     let listitem = $('<li>', {
@@ -35,7 +35,7 @@ btnAdd.click(()=>{
     addItem()
 })
 
-btnClear.click(()=>{
+btnReset.click(()=>{
     inpNewTask.val("")
 })
 })
