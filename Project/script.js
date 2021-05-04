@@ -4,6 +4,7 @@ let btnAdd = $('#btnAdd')
 let btnReset = $('#btnReset')
 let inpNewTask  = $('#inpNewTask')
 let btnCleanup = $('#btnCleanup')
+let btnSort = $('#btnSort')
 function addItem(){
     let listitem = $('<li>', {
         'class':'list-group-item',
@@ -42,7 +43,13 @@ btnReset.click(()=>{
 
 function clearDone(){
 $('#ulTasks li.done').remove()
+//$('#ulTasks  .done').remove()
 }
 btnCleanup.click(clearDone)
+
+function sortDone(){
+    $('#ulTasks .done').appendTo(ulTasks)
+}
+btnSort.click(sortDone)
 })
 
