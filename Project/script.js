@@ -39,6 +39,7 @@ btnAdd.click(()=>{
 
 btnReset.click(()=>{
     inpNewTask.val("")
+    toggleAddResetBtn(false)
 })
 
 function clearDone(){
