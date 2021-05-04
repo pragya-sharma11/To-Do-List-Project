@@ -5,6 +5,7 @@ let btnReset = $('#btnReset')
 let inpNewTask  = $('#inpNewTask')
 let btnCleanup = $('#btnCleanup')
 let btnSort = $('#btnSort')
+
 function addItem(){
     let listitem = $('<li>', {
         'class':'list-group-item',
@@ -18,6 +19,23 @@ function addItem(){
         //toggleClass()-->changes the class of any element
     })
 }
+
+function toggleAddResetBtn(){
+    btnReset.prop('disabled',inpNewTask.val != '')
+    btnAdd.prop('disabled',inpNewTask.val != '')
+    btnSort.prop('disabled',ulTasks.children.length()<1)
+    btnCleanup.prop('disabled',ulTasks.children.length()<1)
+}
+
+function clearDone(){
+    $('#ulTasks li.done').remove()
+    //$('#ulTasks  .done').remove()
+}
+
+function sortDone(){
+    $('#ulTasks .done').appendTo(ulTasks)
+}
+
 inpNewTask.keypress((e) =>{
     if(e.which==13){
        addItem()
@@ -36,39 +54,15 @@ inpNewTask.keypress((e) =>{
 btnAdd.click(()=>{
     addItem()
 })
-
 btnReset.click(()=>{
     inpNewTask.val("")
-    toggleAddResetBtn(false)
+    toggleAddResetBtn()
 })
 
-function clearDone(){
-$('#ulTasks li.done').remove()
-//$('#ulTasks  .done').remove()
-}
 btnCleanup.click(clearDone)
-
-function sortDone(){
-    $('#ulTasks .done').appendTo(ulTasks)
-}
 btnSort.click(sortDone)
-
-function toggleAddResetBtn(enabled){
-    if(enabled) {
-        btnReset.prop('disabled',false)
-        btnAdd.prop('disabled',false)
-        btnSort.prop('disabled',false)
-        btnCleanup.prop('disabled',false)
-    }
-    else {
-        btnReset.prop('disabled',true)
-        btnAdd.prop('disabled',true)
-        btnSort.prop('disabled',true)
-        btnCleanup.prop('disabled',true)
-    }
-}
 inpNewTask.on('input', ()=>{
-    toggleAddResetBtn(inpNewTask.val() != '') 
+    toggleAddResetBtn() 
 })
 })
 
